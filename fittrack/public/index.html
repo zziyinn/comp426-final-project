@@ -24,13 +24,18 @@
 
     <section id="workout-recommendations">
       <h2>Workout Suggestions</h2>
-      <div id="workout-list">
+      <div id="workoutlist">
         <!-- Workout suggestions will appear here -->
       </div>
     </section>
+    
   </main>
 
-  <div id="chat-widget">
+  <div id="chat-icon" onclick="toggleChatWidget()">
+    💬
+  </div>
+  
+  <div id="chat-widget" class="hidden">
     <h3>Fitness Assistant</h3>
     <div id="chat-messages">
       <!-- Chat messages will be dynamically inserted here -->
@@ -40,10 +45,14 @@
       <button id="send-chat-btn">Send</button>
     </div>
   </div>
-
-  <footer>
-    <p>© 2024 Weight Management. All rights reserved.</p>
-  </footer>
+  
+  <script>
+    function toggleChatWidget() {
+      const chatWidget = document.getElementById('chat-widget');
+      chatWidget.classList.toggle('hidden');
+    }
+  </script>
+  
 
   <script src="app.js"></script>
 </body>

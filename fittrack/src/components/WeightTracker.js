@@ -1,4 +1,4 @@
-// components/WeightTracker.js
+// src/components/WeightTracker.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Line } from 'react-chartjs-2';
@@ -10,40 +10,42 @@ function WeightTracker() {
   useEffect(() => {
     axios.get('/api/weights')
       .then(response => setWeightData(response.data))
-      .catch(error => console.error(error));
+      .catch(error => console.error('Error fetching weights:', error));
   }, []);
 
   const addWeight = () => {
     axios.post('/api/weights', { weight })
       .then(response => setWeightData([...weightData, response.data]))
-      .catch(error => console.error(error));
+      .catch(error => console.error('Error adding weight:', error));
     setWeight('');
   };
 
   const chartData = {
-    labels: weightData.map(data => data.date),
+    labels: weightData.map(data => new Date(data.date).toLocaleDateString()),
     datasets: [{
-      label: '体重变化',
+      label: 'Weight Progress',
       data: weightData.map(data => data.weight),
       borderColor: 'blue',
-      fill: false,
+      borderWidth: 2,
+      fill: false
     }]
   };
 
   return (
-    <div>
-      <h2>体重管理</h2>
-      <input 
-        type="number" 
-        value={weight} 
-        onChange={e => setWeight(e.target.value)} 
-        placeholder="输入今日体重" 
-      />
-      <button onClick={addWeight}>记录体重</button>
+    <section>
+      <h2>Track Your Weight</h2>
+      <div className="input-group">
+        <input
+          type="number"
+          value={weight}
+          onChange={(e) => setWeight(e.target.value)}
+          placeholder="Enter today's weight"
+        />
+        <button onClick={addWeight}>Log Weight</button>
+      </div>
       <Line data={chartData} />
-    </div>
+    </section>
   );
 }
 
 export default WeightTracker;
-
