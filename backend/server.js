@@ -62,3 +62,5 @@ app.get('/profile', (req, res) => {
   }
 });
 
+const workoutRoutes = require('./routes/workouts');
+app.use('/api/workouts', workoutRoutes);
