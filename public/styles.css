@@ -1,127 +1,160 @@
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
-  background-color: #f3f4f6;
-  color: #333;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  padding: 0;
+  background-color: #f1f2f6;
+  color: #1c1c1e;
 }
 
 header {
   text-align: center;
-  padding: 0.5rem 0.5rem;
-  background-color: #4f8ef7;
+  padding: 0.5rem 1rem; 
+  background: linear-gradient(90deg, #007aff, #34c759); 
   color: white;
-  font-size: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #d1d1d6;
+  margin: 0 auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+header h1 {
+  font-size: 2.5rem; 
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 header p {
-  font-size: 1.2rem; 
-  margin-top: 0.5rem;
-  color: #dbe4fd; 
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+
+header p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0;
 }
 
 main {
-  max-width: 3500px;
-  margin: 1rem auto;
-  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
   display: flex;
-  flex-direction: row;
+  gap: 2rem;
   justify-content: space-between;
-  gap: 3rem;
-  flex-grow: 1;
 }
 
 section {
+  flex: 1;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   padding: 2rem;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  width: 95%;
-  min-height: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 320px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
 }
 
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #4f8ef7;
+section h2 {
+  font-size: 2rem;
+  color: #007aff;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-input[type="number"], input[type="text"] {
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.input-group input[type="number"] {
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  font-size: 1.2rem;
+  border: 1px solid #d1d1d6;
   border-radius: 8px;
-  font-size: 1rem;
-  width: 100%;
-  margin-bottom: 1rem;
+  flex: 1;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s;
 }
 
-input:focus {
+.input-group input[type="number"]:focus {
+  border-color: #007aff;
   outline: none;
-  border-color: #3c7de0;
-  box-shadow: 0 0 5px rgba(76, 132, 255, 0.5);
 }
 
-button {
-  padding: 0.75rem 2rem;
-  background-color: #4f8ef7;
+.input-group button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: #007aff;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #3a6dd7; /* 改进悬停颜色 */
+.input-group button:hover {
+  background-color: #0056b3;
 }
 
-button:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(60, 125, 224, 0.5);
+#weight-chart {
+  margin-top: 2rem;
+  width: 100%;
+  height: 200px;
+  background-color: #f1f2f6;
+  border: 1px solid #d1d1d6;
+  border-radius: 8px;
 }
 
-footer {
-  background: #333;
-  color: #f1f1f1;
+#workout-recommendations .exercise-item {
+  background-color: #ffffff;
+  border: 1px solid #d1d1d6;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  margin-top: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
+#workout-recommendations .exercise-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
 
+#workout-recommendations .exercise-item h3 {
+  margin-bottom: 1rem;
+  color: #007aff;
+}
 
 /* Chat Icon */
 #chat-icon {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #4f8ef7;
+  background-color: #007aff;
   color: white;
   font-size: 2rem;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* 确保小图标在上层 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+#chat-icon:hover {
+  background-color: #0056b3;
 }
 
 /* Chat Widget */
@@ -129,83 +162,118 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   background-color: white;
   opacity: 0.95;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  z-index: 1001; /* 确保聊天窗口在最上层 */
+  z-index: 1001;
 }
 
 #chat-widget.hidden {
-  display: none; /* 初始隐藏聊天窗口 */
+  display: none;
 }
 
 #chat-widget h3 {
-  background-color: #4f8ef7;
+  background-color: #007aff;
   color: white;
-  padding: 10px;
+  padding: 1rem;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 #chat-messages {
   max-height: 200px;
   overflow-y: auto;
-  padding: 10px;
-  font-size: 0.9rem;
-  color: #333;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #1c1c1e;
 }
 
 .chat-input-group {
   display: flex;
-  padding: 10px;
+  padding: 1rem;
   gap: 0.5rem;
 }
 
 .chat-input-group input {
   flex: 1;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 0.9rem;
+  padding: 0.75rem;
+  border: 1px solid #d1d1d6;
+  border-radius: 12px;
+  font-size: 1rem;
 }
 
 .chat-input-group button {
-  background-color: #34c759;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  background-color: #007aff;
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  transition: background-color 0.3s;
 }
 
 .chat-input-group button:hover {
-  background-color: #2e9c48;
+  background-color: #007aff;
 }
 
 
-#workout-list {
+body.background-image {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('background.png') no-repeat center center fixed; 
+  background-size: cover; 
+  color: white;
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.exercise-item {
-  background-color: #f9f9f9;
-  padding: 1rem;
+.welcome-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.welcome-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5); 
+}
+
+.welcome-subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.enter-button {
+  background-color: #a2a3a4;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.exercise-item h3 {
-  margin: 0 0 0.5rem 0;
-  color: #4f8ef7;
+.enter-button:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
 }
 
-.exercise-item p {
-  margin: 0.2rem 0;
-  font-size: 0.9rem;
-  color: #555;
+.enter-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -218,11 +286,5 @@ footer {
 
   section {
     width: 100%;
-  }
-}
-
-@media (min-width: 1024px) {
-  #chat-messages {
-    max-height: 300px;
   }
 }

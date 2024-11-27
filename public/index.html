@@ -3,57 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weight Management & Workout Suggestions</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Welcome to Fitness Hub</title>
+  <link rel="stylesheet" href="styles.css"> 
 </head>
-<body>
-  <header>
-    <h1>Weight Management</h1>
-    <p>Your personal journey towards a healthier you.</p>
-  </header>
-
-  <main>
-    <section id="weight-tracker">
-      <h2>Track Your Weight</h2>
-      <div class="input-group">
-        <input type="number" id="weight-input" placeholder="Enter today's weight">
-        <button id="add-weight-btn">Log Weight</button>
-      </div>
-      <canvas id="weight-chart"></canvas>
-    </section>
-
-    <section id="workout-recommendations">
-      <h2>Workout Suggestions</h2>
-      <div id="workoutlist">
-        <!-- Workout suggestions will appear here -->
-      </div>
-    </section>
-    
-  </main>
-
-  <div id="chat-icon" onclick="toggleChatWidget()">
-    💬
+<body class="background-image">
+  <div class="welcome-container">
+    <h1 class="welcome-title">Welcome to Fitness Hub</h1>
+    <p class="welcome-subtitle">Your personal fitness assistant to stay healthy and active!</p>
+    <button class="enter-button" onclick="window.location.href='main.html'">Start Your Journey</button>
   </div>
-  
-  <div id="chat-widget" class="hidden">
-    <h3>Fitness Assistant</h3>
-    <div id="chat-messages">
-      <!-- Chat messages will be dynamically inserted here -->
-    </div>
-    <div class="chat-input-group">
-      <input type="text" id="chat-input" placeholder="Type a message...">
-      <button id="send-chat-btn">Send</button>
-    </div>
-  </div>
-  
-  <script>
-    function toggleChatWidget() {
-      const chatWidget = document.getElementById('chat-widget');
-      chatWidget.classList.toggle('hidden');
-    }
-  </script>
-  
-
-  <script src="app.js"></script>
 </body>
 </html>
