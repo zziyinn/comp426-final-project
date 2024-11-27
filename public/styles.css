@@ -38,7 +38,7 @@ header p {
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 2rem auto;
   padding: 0 1.5rem;
   display: flex;
@@ -140,9 +140,7 @@ section h2 {
   align-items: center;
   gap: 1rem; 
   background-color: #ffffff; 
-  padding: 1.5rem;
-  border-radius: 12px; 
-  box-shadow: 0 4px 8px rgba(40, 40, 40, 0.1); 
+  padding: 0.5rem;
   max-width: 500px; 
   margin: 0 auto;
 }
@@ -189,6 +187,43 @@ section h2 {
   font-size: 1rem;
   font-weight: 500;
   color: #595a5a; 
+}
+
+#exercise-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  gap: 0.5rem; 
+  margin: 0 auto; 
+  padding: 1rem;
+}
+
+.exercise-item {
+  background-color: #ffffff;
+  border: 1px solid #d1d1d6;
+  border-radius: 8px; 
+  padding: 0.5rem; 
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08); 
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.exercise-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+.exercise-item h3 {
+  margin-bottom: 0.5rem;
+  color: #007aff;
+  font-size: 1rem; 
+}
+
+
+.exercise-item p {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem; 
+  color: #555;
 }
 
 /* Chat Icon */
