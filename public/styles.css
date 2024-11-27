@@ -62,7 +62,7 @@ section:hover {
 }
 
 section h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #007aff;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -76,7 +76,7 @@ section h2 {
 
 .input-group input[type="number"] {
   padding: 0.75rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: 1px solid #d1d1d6;
   border-radius: 8px;
   flex: 1;
@@ -91,7 +91,7 @@ section h2 {
 
 .input-group button {
   padding: 0.75rem 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   background-color: #007aff;
   color: white;
   border: none;
@@ -101,7 +101,7 @@ section h2 {
 }
 
 .input-group button:hover {
-  background-color: #0056b3;
+  background-color: #28a745;
 }
 
 #weight-chart {
@@ -132,6 +132,63 @@ section h2 {
 #workout-recommendations .exercise-item h3 {
   margin-bottom: 1rem;
   color: #007aff;
+}
+
+#filter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; 
+  background-color: #ffffff; 
+  padding: 1.5rem;
+  border-radius: 12px; 
+  box-shadow: 0 4px 8px rgba(40, 40, 40, 0.1); 
+  max-width: 500px; 
+  margin: 0 auto;
+}
+
+#filter-form label {
+  font-size: 1rem;
+  color: #595a5a; 
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#filter-form select, #filter-form button {
+  width: 100%; 
+  padding: 0.75rem; 
+  font-size: 1rem; 
+  border: 1px solid #d1d1d6; 
+  border-radius: 8px; 
+  background-color: #f9f9f9; 
+  transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+#filter-form select:focus, #filter-form button:hover {
+  border-color: #007aff; 
+  box-shadow: 0 0 6px rgba(0, 122, 255, 0.5); 
+  outline: none; 
+}
+
+#filter-form button {
+  background-color: #007aff; 
+  color: white;
+  cursor: pointer;
+}
+
+#filter-form button:hover {
+  background-color: #28a745; 
+}
+
+#filter-form button:active {
+  background-color: #1e7e34;
+  transform: scale(0.98); 
+}
+
+#level {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #595a5a; 
 }
 
 /* Chat Icon */
@@ -180,7 +237,7 @@ section h2 {
   color: white;
   padding: 1rem;
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }

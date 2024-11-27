@@ -24,23 +24,33 @@
 
     <section id="workout-recommendations">
       <h2>Workout Suggestions</h2>
-      <div id="workout-list">
-        <div class="exercise-item">
-          <h3>Cardio</h3>
-          <p>Duration: 30 mins</p>
-          <p>Calories Burned: ~300</p>
-        </div>
-        <div class="exercise-item">
-          <h3>Strength Training</h3>
-          <p>Duration: 40 mins</p>
-          <p>Calories Burned: ~400</p>
-        </div>
-        <div class="exercise-item">
-          <h3>Yoga</h3>
-          <p>Duration: 20 mins</p>
-          <p>Calories Burned: ~150</p>
-        </div>
+      <form id="filter-form">
+        <label for="muscle-group">Select Muscle Group:</label>
+        <select id="muscle-group" name="muscleGroup">
+          <option value="">-- Select Muscle Group --</option>
+          <option value="Abdominals - Lower">Abdominals - Lower</option>
+          <option value="Abdominals - Obliques">Abdominals - Obliques</option>
+          <option value="Back - Latissimus Dorsi">Back - Latissimus Dorsi</option>
+          <option value="Biceps">Biceps</option>
+          <!-- Add more muscle groups as necessary -->
+        </select>
+    
+        <label for="level">Select Level:</label>
+        <select id="level" name="level">
+          <option value="">-- Select Level --</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+    
+        <button type="submit">Submit</button>
+      </form>
+    
+      <div id="exercise-list" class="exercise-list">
+        <canvas id="weight-chart"></canvas>
       </div>
+      
+    </div>
     </section>
     
     
