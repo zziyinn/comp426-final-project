@@ -369,6 +369,58 @@ body.background-image {
 }
 
 
+.weather-widget {
+  background-color: #ffffff80;
+  border-radius: 20px;
+  padding: 10px;
+  width: 240px;
+  text-align: center;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.weather-widget:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.weather-widget h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.weather-widget p {
+  margin: 8px 0;
+}
+
+.weather-widget img {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+}
+
+.weather-widget .location {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.weather-widget .temp {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.weather-widget .description {
+  font-size: 18px;
+  color: #000000;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   main {

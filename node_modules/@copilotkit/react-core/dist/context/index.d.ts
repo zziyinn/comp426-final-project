@@ -1,0 +1,11 @@
+export { CoagentInChatRenderFunction, CopilotApiConfig, CopilotContext, CopilotContextParams, useCopilotContext } from './copilot-context.js';
+export { CopilotMessagesContext, CopilotMessagesContextParams, useCopilotMessagesContext } from './copilot-messages-context.js';
+import '@copilotkit/shared';
+import '../types/frontend-action.js';
+import 'react';
+import '../hooks/use-tree.js';
+import '../types/document-pointer.js';
+import '../types/chat-suggestion-configuration.js';
+import '../types/coagent-action.js';
+import '../types/coagent-state.js';
+import '@copilotkit/runtime-client-gql';

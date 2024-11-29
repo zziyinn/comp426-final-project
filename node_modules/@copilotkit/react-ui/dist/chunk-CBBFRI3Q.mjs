@@ -1,0 +1,81 @@
+import {
+  ActivityIcon,
+  CloseIcon,
+  HeaderCloseIcon,
+  OpenIcon,
+  PushToTalkIcon,
+  RegenerateIcon,
+  SendIcon,
+  SpinnerIcon,
+  StopIcon
+} from "./chunk-FZC7X5PK.mjs";
+import {
+  __spreadValues
+} from "./chunk-MRXNTQOX.mjs";
+
+// src/components/chat/ChatContext.tsx
+import React, { useMemo } from "react";
+import { jsx } from "react/jsx-runtime";
+var ChatContext = React.createContext(void 0);
+function useChatContext() {
+  const context = React.useContext(ChatContext);
+  if (context === void 0) {
+    throw new Error(
+      "Context not found. Did you forget to wrap your app in a <ChatContextProvider> component?"
+    );
+  }
+  return context;
+}
+var ChatContextProvider = ({
+  // temperature,
+  // instructions,
+  // maxFeedback,
+  labels,
+  icons,
+  children,
+  open,
+  setOpen
+}) => {
+  const memoizedLabels = useMemo(
+    () => __spreadValues(__spreadValues({}, {
+      initial: "",
+      title: "CopilotKit",
+      placeholder: "Type a message...",
+      error: "\u274C An error occurred. Please try again.",
+      stopGenerating: "Stop generating",
+      regenerateResponse: "Regenerate response"
+    }), labels),
+    [labels]
+  );
+  const memoizedIcons = useMemo(
+    () => __spreadValues(__spreadValues({}, {
+      openIcon: OpenIcon,
+      closeIcon: CloseIcon,
+      headerCloseIcon: HeaderCloseIcon,
+      sendIcon: SendIcon,
+      activityIcon: ActivityIcon,
+      spinnerIcon: SpinnerIcon,
+      stopIcon: StopIcon,
+      regenerateIcon: RegenerateIcon,
+      pushToTalkIcon: PushToTalkIcon
+    }), icons),
+    [icons]
+  );
+  const context = useMemo(
+    () => ({
+      labels: memoizedLabels,
+      icons: memoizedIcons,
+      open,
+      setOpen
+    }),
+    [memoizedLabels, memoizedIcons, open, setOpen]
+  );
+  return /* @__PURE__ */ jsx(ChatContext.Provider, { value: context, children });
+};
+
+export {
+  ChatContext,
+  useChatContext,
+  ChatContextProvider
+};
+//# sourceMappingURL=chunk-CBBFRI3Q.mjs.map

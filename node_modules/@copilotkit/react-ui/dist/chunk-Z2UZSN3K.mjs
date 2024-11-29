@@ -1,0 +1,29 @@
+// src/hooks/use-copilot-chat-suggestions.tsx
+import { useEffect } from "react";
+import { useCopilotContext } from "@copilotkit/react-core";
+import { randomId } from "@copilotkit/shared";
+function useCopilotChatSuggestions({
+  instructions,
+  className,
+  minSuggestions = 1,
+  maxSuggestions = 3
+}, dependencies = []) {
+  const context = useCopilotContext();
+  useEffect(() => {
+    const id = randomId();
+    context.addChatSuggestionConfiguration(id, {
+      instructions,
+      minSuggestions,
+      maxSuggestions,
+      className
+    });
+    return () => {
+      context.removeChatSuggestionConfiguration(id);
+    };
+  }, [...dependencies, instructions, minSuggestions, maxSuggestions, className]);
+}
+
+export {
+  useCopilotChatSuggestions
+};
+//# sourceMappingURL=chunk-Z2UZSN3K.mjs.map
