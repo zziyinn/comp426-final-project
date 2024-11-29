@@ -1,5 +1,5 @@
-const WEATHER_API_KEY = 'f8c7a64b80ff4734b15221030242410';  // Replace with your actual API key
-const city = 'Chapel Hill';  // Dynamic location
+const WEATHER_API_KEY = 'f8c7a64b80ff4734b15221030242410';  
+const city = 'Chapel Hill';  
 const WEATHER_API_URL = `http://api.weatherapi.com/v1/current.json?key=${WEATHER_API_KEY}&q=${city}`;
 
 async function displayWeather() {
