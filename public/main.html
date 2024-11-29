@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weight Management & Workout Suggestions</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+  <!-- 加载 Chart.js 版本 3.9.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
 </head>
 <body>
   <header>
@@ -16,7 +20,7 @@
     <section id="weight-tracker">
       <h2>Track Your Weight</h2>
       <div class="input-group">
-        <input type="number" id="weight-input" placeholder="Enter today's weight">
+        <input type="number" id="weight-input" placeholder="Enter your today's weight (kg)">
         <button id="add-weight-btn">Log Weight</button>
       </div>
       <canvas id="weight-chart"></canvas>
@@ -47,13 +51,9 @@
       </form>
     
       <div id="exercise-list" class="exercise-list">
-        <canvas id="weight-chart"></canvas>
+        <!-- Exercise suggestions will appear here -->
       </div>
-      
-    </div>
-    </section>
-    
-    
+    </section>   
   </main>
 
   <div id="chat-icon" onclick="toggleChatWidget()">
@@ -79,7 +79,7 @@
     }
   </script>
   
-
+  <script src="weight-chart.js"></script>
   <script src="workout.js"></script> 
   <script src="copilot.js"></script> 
 </body>
