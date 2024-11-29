@@ -4,21 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to Fitness Hub</title>
-  <link rel="stylesheet" href="styles.css"> 
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="background-image">
 
   <div class="weather-widget">
     <div id="weather-info">
-        <p>Loading weather...</p>
+      <h2>Chapel Hill</h2>
+      <p class="temp">11.7°C</p>
+      <p class="description">Partly cloudy</p>
+      <img src="weather-icon.png" alt="Weather Icon">
     </div>
   </div>
-  <script src="weatherapi.js"></script> 
 
   <div class="welcome-container">
     <h1 class="welcome-title">Welcome to Fitness Hub</h1>
     <p class="welcome-subtitle">Your personal fitness assistant to stay healthy and active!</p>
+
+    <div id="user-section">
+      <p id="user-greeting">What's your name?</p>
+      <input type="text" id="user-name" placeholder="Enter your name">
+      <button class="enter-button" id="save-name-button">Save Name</button>
+    </div>
+
+
     <button class="enter-button" onclick="window.location.href='main.html'">Start Your Journey</button>
   </div>
+
+  <script src="user.js"></script>
+  <script src="weatherapi.js"></script>
+
 </body>
 </html>
