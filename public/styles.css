@@ -285,6 +285,16 @@ section h2 {
   color: #1c1c1e;
 }
 
+#chat-messages .user {
+  text-align: right;
+  color: #3b3b3b;
+}
+
+#chat-messages .bot {
+  text-align: left;
+  color: #007BFF;
+}
+
 .chat-input-group {
   display: flex;
   padding: 1rem;
