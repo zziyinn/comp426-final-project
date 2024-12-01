@@ -17,7 +17,7 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
 
 ### Features
 
-#### Interactive Front End
+### Interactive Front End
 - **Dynamic Weather Widget**:
   - Displays real-time weather updates for the user’s location, including temperature, conditions, and a weather icon.
   - Integrated with WeatherAPI to provide accurate and timely information, ensuring users can plan outdoor activities accordingly.
@@ -35,7 +35,7 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
   - Ensures users feel supported during their fitness journey by offering quick answers and motivational feedback.
 
 
-##### RESTful Back End
+### RESTful Back End
 - **Weight Management Tracker**:
 
 
@@ -48,7 +48,7 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
   - Designed for scalability to support diverse user needs and growth.
 
 
-##### 3rd Party API Integration
+### 3rd Party API Integration
 - **WeatherAPI**:
   - Fetches and displays real-time weather updates based on user location.
   - Provides a seamless connection between environmental conditions and fitness planning.
@@ -60,7 +60,7 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
   - Greets returning users with a personalized message, reinforcing engagement and usability.
 
 
-#### Pleasing User Experience
+### Pleasing User Experience
 - **Modern, Responsive Design**:
   - Styled with CSS to create an appealing, user-friendly interface that adapts to both desktop and mobile screens.
   - Includes hover effects, animations, and intuitive layouts to enhance user interactions.
