@@ -37,6 +37,8 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
 
 ### RESTful Back End
 - **Weight Management Tracker**:
+  -  Custom-built RESTful API supports CRUD operations to manage users' weight data.
+  - Endpoints allow users to post, update weight data based on the selected dates.
 
 
 - **Workout Recommendation API**:
@@ -52,6 +54,8 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
 - **WeatherAPI**:
   - Fetches and displays real-time weather updates based on user location.
   - Provides a seamless connection between environmental conditions and fitness planning.
+- **Google Gemini API**:
+  - Provide the AI assistant to answer users' variant questions about health, exercises, etc.
 
 
 ### Session-Persistent State
@@ -96,6 +100,8 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
   - Provides real-time weather updates to ensure users can plan their activities effectively.  
 - **Custom Workout API**:  
   - Fetches personalized workout suggestions tailored to the user’s selected muscle group and fitness level.
+- **Google Gemini API**:
+  - Provide the AI assistant to answer users' variant questions about health, exercises, etc.
 
 
 #### State Management
@@ -105,8 +111,7 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
 
 
 ### Prerequisites
-1. Install [Node.js](https://nodejs.org/)
-2. Install and run MongoDB
+1. Install [Node.js](https://nodejs.org/).
 
 #### Steps
 1. **Clone the repository**
@@ -118,37 +123,22 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
 2. **Install dependencies**
    - Frontend
      ```bash
-     cd client
      npm install
      ```
    - Backend
      ```bash
-     cd server
+     cd backend
      npm install
      ```
 
-3. **Set environment variables**
-   - In `server/.env`, configure the following:
-     ```
-     MONGO_URI=<Your MongoDB connection string>
-     PORT=5000
-     WORKOUT_API_KEY=<Your Workout API key>
-     ```
-
-4. **Run the application**
+3. **Run the application**
    - Start the backend:
      ```bash
      cd server
-     npm start
+     node server.js
      ```
    - Start the frontend:
-     ```bash
-     cd client
-     npm start
-     ```
-
-5. **Access the application**
-   Open your browser and go to [http://localhost:3000](http://localhost:3000).
+     Use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Extension for `public/index.html` to start the webpage.
 
 ### Presentation Video
 - **Link**: [Presentation Video](#) 
