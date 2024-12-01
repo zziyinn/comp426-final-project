@@ -1,69 +1,111 @@
-The final project is very open-ended and there are no specific requirements for what your final project does per se. There will be 100 overall points awarded as follows:
-
-30 points: Having a front end that is interactive and event-driven
-30 points: Having a back end that serves at least two resources with a RESTful CRUD (create, read, update, and delete) API.
-10 points: Uses at least one 3rd party API
-10 points: Uses session-persistent state in some way.
-For example, authenticating the user and then having user-specific preferences and/or data.
-10 points: A pleasing user experience (i.e., easy to use, good design, etc.).
-10 points: Quality of presentation video (see below)
-Each group will be expected to turn in their final projects as a repository with all of the code, stylesheets, images, and any other files developed as part of their project with a top-level README.md file that briefly describes their project and includes a link to a presentation video. Please be sure NOT to include npm modules or external libraries. Use .gitignore to exclude these kinds of things from your repository.
-
-The presentation video should be no more than 10 minutes long and should demonstrate your final project and describe the various components of its implementation. You should think of this as if you are presenting your work to someone who may be interested in purchasing your software. To that end, you are trying to show that the web application you built is interesting, useful, and well-constructed. We will be primarily grading based on your presentation video, so be sure that it appropriately points out or otherwise demonstrates the various aspects listed above (i.e., interactive front-end, backend RESTful API, 3rd party APIs in use, session-persistent state, design elements, etc.).
-
 
 # comp426-final-project
 
-## Weight Management and Workout Recommendation Web Application
+# Fitness Hub: Your Personal Fitness Assistant
 
 ## Project Structure
 
-```
-weight-management-app/
-├── client/                # Frontend code (React)
-│   ├── public/            # Static assets
-│   ├── src/               # React components and logic
-│       ├── components/    # Reusable components (e.g., charts, forms)
-│       ├── pages/         # Application pages
-│       ├── services/      # API request logic
-│       ├── App.js         # Main app entry point
-│       └── index.js       # React render entry
-├── server/                # Backend code (Node.js + Express)
-│   ├── models/            # Data models (MongoDB schemas)
-│   ├── routes/            # API routes
-│   ├── server.js          # Main server entry point
-│   └── controllers/       # Business logic
-├── README.md              # Project documentation
-├── package.json           # Project dependencies
-└── .env                   # Environment variable configurations
-```
+
 
 ## Project Overview
-This web application helps users track their weight management and receive personalized workout recommendations. By integrating weight logging, data visualization, and third-party workout recommendation APIs, users can easily plan and maintain a healthy lifestyle.
+
+Fitness Hub is a web application designed to inspire and empower individuals to achieve their fitness goals. Whether you're just starting your fitness journey or are an experienced enthusiast, Fitness Hub provides the tools you need to stay motivated, organized, and informed. By offering personalized workout suggestions, tracking weight progress, and delivering real-time weather updates, Fitness Hub creates a holistic fitness companion tailored to your unique needs.
+
+We built Fitness Hub with the mission of bridging the gap between fitness aspirations and everyday life. Many people struggle to maintain a consistent fitness routine due to a lack of guidance, motivation, or personalized tools. With Fitness Hub, our goal is to eliminate these barriers and make fitness a joyful, accessible, and sustainable part of everyone's lifestyle.
+
+The idea for Fitness Hub was born from a shared passion for health and technology. As a team, we realized the power of combining data, design, and creativity to solve common challenges faced by fitness enthusiasts. Whether it’s tracking progress, finding suitable workouts, or just adapting plans to fit your current weather, Fitness Hub is designed to be the all-in-one solution to help users stay consistent and reach their goals. By making fitness simple, enjoyable, and personalized, we hope to inspire users to embrace healthier habits and feel accomplished every step of the way.
+
+From the moment you open the app, Fitness Hub welcomes you into a supportive and intuitive space where your goals are our priority. Start your journey today, and let Fitness Hub guide you to a healthier, happier you.
+
 
 ## Features
-1. **Weight Tracking**  
-   - Users can log daily/weekly weight data.
-   - Visualize weight changes with a line chart.
 
-2. **Workout Recommendations**  
-   - Provide personalized workout plans through a third-party Workout API.
-   - Filter workouts by type (e.g., intensity, duration).
+### Interactive Front End
+- **Dynamic Weather Widget**:
+  - Displays real-time weather updates for the user’s location, including temperature, conditions, and a weather icon.
+  - Integrated with WeatherAPI to provide accurate and timely information, ensuring users can plan outdoor activities accordingly.
+  
+- **Weight Management Tracker**:
+  - Users can log their daily weight, visualize progress through an interactive Chart.js graph, and track trends over time.
+  - The graph dynamically updates to reflect changes, providing immediate feedback and insights into their fitness journey.
 
-3. **Data Management**  
-   - Users can create, read, update, and delete their weight records.
-   - Backend supports multi-user data storage and management.
+- **Personalized Workout Suggestions**:
+  - Users can filter workout recommendations by muscle group and difficulty level.
+  - A responsive interface displays tailored exercise plans that are easy to follow and visually organized.
 
-4. **Interactive Features**  
-   - Customer service chat window for answering common questions.
-   - Provide health-related suggestions.
+- **Chat Widget for Assistance**:
+  - Integrated a chatbot to provide users with fitness tips and guidance in real time.
+  - Ensures users feel supported during their fitness journey by offering quick answers and motivational feedback.
 
-## Tech Stack
-- **Frontend**: React.js, D3.js (for data visualization)
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Third-party API**: Workout Recommendation API (e.g., from RapidAPI platform)
-- **Other Tools**: Axios (for HTTP communication), dotenv (for environment variables)
+
+### RESTful Back End
+- **Weight Management Tracker**:
+
+
+- **Workout Recommendation API**:
+  - Custom-built API supports CRUD operations to manage workout suggestions.
+  - Endpoints allow users to fetch, update, and manage workout data based on filters such as muscle group and skill level.
+
+- **User Data Management**:
+  - Stores user preferences and weight logs securely, ensuring data is retrievable across sessions.
+  - Designed for scalability to support diverse user needs and growth.
+
+
+### 3rd Party API Integration
+- **WeatherAPI**:
+  - Fetches and displays real-time weather updates based on user location.
+  - Provides a seamless connection between environmental conditions and fitness planning.
+
+
+### Session-Persistent State
+- **Personalized User Experience**:
+  - The application remembers user names and preferences using `sessionStorage`, creating a welcoming and consistent experience.
+  - Greets returning users with a personalized message, reinforcing engagement and usability.
+
+
+### Pleasing User Experience
+- **Modern, Responsive Design**:
+  - Styled with CSS to create an appealing, user-friendly interface that adapts to both desktop and mobile screens.
+  - Includes hover effects, animations, and intuitive layouts to enhance user interactions.
+
+- **Accessible and Intuitive Navigation**:
+  - Clear section headers, input placeholders, and buttons guide users through the application.
+  - Optimized for accessibility with appropriate color contrast and responsiveness for various devices.
+
+
+## Implementation Details
+
+### Front End
+- **Languages/Tools**:  
+  - HTML, CSS, JavaScript
+- **Libraries**:  
+  - Chart.js for weight tracking visualization
+- **Highlights**:  
+  - Responsive layout designed to adapt seamlessly to mobile and desktop devices.  
+  - Dynamic interaction enabled through JavaScript event listeners, providing a smooth and engaging user experience.
+
+### Back End
+- **Framework**:  
+  - Node.js (used as a local development server for APIs)
+- **Features**:  
+  - **RESTful API Endpoints** for managing workout data:  
+    - `GET`: Retrieve workout suggestions based on user-defined filters.  
+    - `POST`: Save user progress logs.  
+    - `PUT`: Update user preferences or logs.  
+    - `DELETE`: Remove specific data entries as needed.
+
+### APIs Used
+- **WeatherAPI**:  
+  - Provides real-time weather updates to ensure users can plan their activities effectively.  
+- **Custom Workout API**:  
+  - Fetches personalized workout suggestions tailored to the user’s selected muscle group and fitness level.
+
+
+### State Management
+- **Session Storage**:  
+  - Ensures user-specific data, such as their name, is preserved during the session to provide a consistent and personalized experience.  
+  - Implements dynamic greetings and updates based on stored session data.
+
 
 ### Prerequisites
 1. Install [Node.js](https://nodejs.org/)
@@ -111,26 +153,14 @@ This web application helps users track their weight management and receive perso
 5. **Access the application**
    Open your browser and go to [http://localhost:3000](http://localhost:3000).
 
-## API Routes Documentation
+## Presentation Video
+- **Link**: [Presentation Video](#) 
 
-### Weight Records API
-- **GET /weights**  
-  Retrieve all weight records.
-- **POST /weights**  
-  Create a new weight record.
-- **PUT /weights/:id**  
-  Update a specific weight record.
-- **DELETE /weights/:id**  
-  Delete a specific weight record.
+## Credits
+- **Team Members**:  
+  - Ziyin Zheng  
+  - Anqi Zhou
 
-### Workout Recommendation API
-- **GET /workouts**  
-  Retrieve workout recommendations based on user preferences.
-
-## Future Improvements
-- Add user authentication for a personalized experience.
-- Implement target weight reminders.
-- Provide integrated dietary suggestions.
 
 ## License
 This project is open-sourced under the [MIT License](LICENSE).
