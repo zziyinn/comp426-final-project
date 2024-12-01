@@ -314,7 +314,6 @@ section h2 {
 }
 
 
-/* 全局样式 */
 body.background-image {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
@@ -365,7 +364,7 @@ body.background-image {
   height: 40px;
 }
 
-/* 欢迎容器 */
+
 .welcome-container {
   text-align: center;
   position: relative; 
