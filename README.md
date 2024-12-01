@@ -1,10 +1,10 @@
 
-# comp426-final-project -- Fitness Hub: Your Personal Fitness Assistant
+## comp426-final-project -- Fitness Hub: Your Personal Fitness Assistant
 
-## Project Structure
+### Project Structure
 
 
-## Project Overview
+### Project Overview
 
 Fitness Hub is a web application designed to inspire and empower individuals to achieve their fitness goals. Whether you're just starting your fitness journey or are an experienced enthusiast, Fitness Hub provides the tools you need to stay motivated, organized, and informed. By offering personalized workout suggestions, tracking weight progress, and delivering real-time weather updates, Fitness Hub creates a holistic fitness companion tailored to your unique needs.
 
@@ -15,9 +15,9 @@ The idea for Fitness Hub was born from a shared passion for health and technolog
 From the moment you open the app, Fitness Hub welcomes you into a supportive and intuitive space where your goals are our priority. Start your journey today, and let Fitness Hub guide you to a healthier, happier you.
 
 
-## Features
+### Features
 
-### Interactive Front End
+#### Interactive Front End
 - **Dynamic Weather Widget**:
   - Displays real-time weather updates for the user’s location, including temperature, conditions, and a weather icon.
   - Integrated with WeatherAPI to provide accurate and timely information, ensuring users can plan outdoor activities accordingly.
@@ -35,7 +35,7 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
   - Ensures users feel supported during their fitness journey by offering quick answers and motivational feedback.
 
 
-### RESTful Back End
+##### RESTful Back End
 - **Weight Management Tracker**:
 
 
@@ -48,7 +48,7 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
   - Designed for scalability to support diverse user needs and growth.
 
 
-### 3rd Party API Integration
+##### 3rd Party API Integration
 - **WeatherAPI**:
   - Fetches and displays real-time weather updates based on user location.
   - Provides a seamless connection between environmental conditions and fitness planning.
@@ -60,7 +60,7 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
   - Greets returning users with a personalized message, reinforcing engagement and usability.
 
 
-### Pleasing User Experience
+#### Pleasing User Experience
 - **Modern, Responsive Design**:
   - Styled with CSS to create an appealing, user-friendly interface that adapts to both desktop and mobile screens.
   - Includes hover effects, animations, and intuitive layouts to enhance user interactions.
@@ -70,9 +70,9 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
   - Optimized for accessibility with appropriate color contrast and responsiveness for various devices.
 
 
-## Implementation Details
+### Implementation Details
 
-### Front End
+#### Front End
 - **Languages/Tools**:  
   - HTML, CSS, JavaScript
 - **Libraries**:  
@@ -81,7 +81,7 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
   - Responsive layout designed to adapt seamlessly to mobile and desktop devices.  
   - Dynamic interaction enabled through JavaScript event listeners, providing a smooth and engaging user experience.
 
-### Back End
+#### Back End
 - **Framework**:  
   - Node.js (used as a local development server for APIs)
 - **Features**:  
@@ -91,14 +91,14 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
     - `PUT`: Update user preferences or logs.  
     - `DELETE`: Remove specific data entries as needed.
 
-### APIs Used
+#### APIs Used
 - **WeatherAPI**:  
   - Provides real-time weather updates to ensure users can plan their activities effectively.  
 - **Custom Workout API**:  
   - Fetches personalized workout suggestions tailored to the user’s selected muscle group and fitness level.
 
 
-### State Management
+#### State Management
 - **Session Storage**:  
   - Ensures user-specific data, such as their name, is preserved during the session to provide a consistent and personalized experience.  
   - Implements dynamic greetings and updates based on stored session data.
@@ -108,7 +108,7 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
 1. Install [Node.js](https://nodejs.org/)
 2. Install and run MongoDB
 
-### Steps
+#### Steps
 1. **Clone the repository**
    ```bash
    git clone https://github.com/your-repo/weight-management-app.git
@@ -150,14 +150,14 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
 5. **Access the application**
    Open your browser and go to [http://localhost:3000](http://localhost:3000).
 
-## Presentation Video
+### Presentation Video
 - **Link**: [Presentation Video](#) 
 
-## Credits
+### Credits
 - **Team Members**:  
   - Ziyin Zheng  
   - Anqi Zhou
 
 
-## License
+### License
 This project is open-sourced under the [MIT License](LICENSE).
