@@ -1,10 +1,7 @@
 
-# comp426-final-project
-
-# Fitness Hub: Your Personal Fitness Assistant
+# comp426-final-project -- Fitness Hub: Your Personal Fitness Assistant
 
 ## Project Structure
-
 
 
 ## Project Overview
