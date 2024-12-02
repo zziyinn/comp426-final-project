@@ -1,3 +1,4 @@
+// This file is used to interact with the Google Generative AI model to generate responses to user input.
 import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
 const gemini_apiKey = "AIzaSyBQZ4Hymperlqaz2zf-wK-UsZNx4b3lnYY";
@@ -24,4 +25,3 @@ sendButton.addEventListener("click", async () => {
     chatDiv.appendChild(botMessage);
     document.getElementById("chat-input").value = "";
 });
-

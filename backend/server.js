@@ -46,6 +46,7 @@ function saveWeightData(user, date, weight) {
   return weightData;
 }
 
+// Store weight data after user logs their weight
 app.post("/log-weight", (req, res) => {
   console.log(req.body);
   let userName = req.body.userName;
@@ -65,6 +66,7 @@ app.post("/log-weight", (req, res) => {
   }
 });
 
+// Retrieve weight data from local storage
 app.get("/log-weight", (req, res) => {
   const { userName } = req.query;
   console.log(userName);
@@ -80,6 +82,7 @@ app.get("/log-weight", (req, res) => {
   }
 });
 
+// Check if user is new or existing
 app.get("/user", (req, res) => {
   const { userName } = req.query;
   console.log(userName);
