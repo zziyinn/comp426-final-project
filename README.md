@@ -1,8 +1,6 @@
 
 ## comp426-final-project -- Fitness Hub: Your Personal Fitness Assistant
 
-### Project Structure
-
 
 ### Project Overview
 
@@ -141,7 +139,7 @@ From the moment you open the app, Fitness Hub welcomes you into a supportive and
      Use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Extension for `public/index.html` to start the webpage.
 
 ### Presentation Video
-- **Link**: [Presentation Video](#) 
+- **Link**: [Presentation Video](https://youtu.be/_C87bLjeeL0) 
 
 ### Credits
 - **Team Members**:  
